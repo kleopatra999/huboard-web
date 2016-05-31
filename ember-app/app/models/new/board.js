@@ -93,7 +93,7 @@ var Board = Model.extend({
     }
   }),
   issuesById: function(){
-    return _.groupBy(this.get('issues'), (issue)=> {
+    return _.indexBy(this.get('issues'), (issue)=> {
       return issue.get('id');
     });
   }.property('issues.[]'),
